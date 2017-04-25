@@ -1,0 +1,2 @@
+# Automatiserad_testning_lab2
+IntegrationTest
