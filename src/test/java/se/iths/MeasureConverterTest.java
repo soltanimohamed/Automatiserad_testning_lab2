@@ -1,9 +1,11 @@
 package se.iths;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
+
 import static org.junit.Assert.*;
 
+@Category(ConvertMeasure.class)
 public class MeasureConverterTest{
  static MeasureConverter converter;
 

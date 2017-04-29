@@ -2,8 +2,11 @@ package se.iths;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
+
 import static org.junit.Assert.*;
 
+@Category(ConvertTime.class)
 public class TimeConverterTest{
   static TimeConverter time;
   @BeforeClass
@@ -24,27 +27,8 @@ public class TimeConverterTest{
    }
 
    @Test(expected=IllegalArgumentException.class)
-   public void getMeridiemTestLower(){
+   public void getMeridiemTestException(){
      String result = time.getMeridiem(-1);
      assertEquals(null, result);
    }
-
-   @Test(expected=IllegalArgumentException.class)
-   public void getMeridiemTestHigher(){
-     String result = time.getMeridiem(24);
-     assertEquals(null, result);
-   }
-
-   @Test
-   public void getMeridiemTestAM1(){
-     String result = time.getMeridiem(1);
-     assertEquals("AM", result);
-   }
-
-   @Test
-   public void getMeridiemTestPM1(){
-     String result = time.getMeridiem(22);
-     assertEquals("PM", result);
-   }
-
 }
